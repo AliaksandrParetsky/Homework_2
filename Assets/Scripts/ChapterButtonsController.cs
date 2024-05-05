@@ -28,7 +28,16 @@ public class ChapterButtonsController : MonoBehaviour
         {
             button = GetComponent<Button>();
             button.onClick.AddListener(GetInfo);
-            lableText.text = "Buttons";
+
+            if(lableText != null)
+            {
+                lableText.text = "Buttons";
+            }
+            else
+            {
+                Debug.LogError("LableText is Null!");
+            }
+            
         }
     }
 

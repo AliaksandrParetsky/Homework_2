@@ -33,6 +33,7 @@ public class DisableButton : MonoBehaviour
     private void OnDisable()
     {
         button.onClick.RemoveListener(DisButtons);
+
         foreach (var button in buttons)
         {
             button.interactable = true;

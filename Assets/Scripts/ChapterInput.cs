@@ -8,11 +8,10 @@ public class ChapterInput : MonoBehaviour
     {
         if (GetComponent<TMP_InputField>())
         {
-            textInputField = GetComponent<TMP_InputField>();
-        }
-        else
-        {
-            Debug.LogError("Компонент TMP_Text не найден!");
+            if(textInputField != null)
+            {
+                textInputField = GetComponent<TMP_InputField>();
+            }
         }
     }
 

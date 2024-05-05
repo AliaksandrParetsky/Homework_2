@@ -7,17 +7,28 @@ public class DropDowne : MonoBehaviour
 
     public void DropdownSample(int index)
     {
-        switch (index)
+        if (text != null)
         {
-            case 0: text.text = "Option A";
-                break;
-            case 1: text.text = "Option B";
-                break;
-            case 2: text.text = "Option C";
-                break;
-            case 3: text.text = "Option D";
-                break;
-                    
+            switch (index)
+            {
+                case 0:
+                    text.text = "Option A";
+                    break;
+                case 1:
+                    text.text = "Option B";
+                    break;
+                case 2:
+                    text.text = "Option C";
+                    break;
+                case 3:
+                    text.text = "Option D";
+                    break;
+
+            }
+        }
+        else
+        {
+            Debug.LogError("Text is Null!");
         }
     }
 }
