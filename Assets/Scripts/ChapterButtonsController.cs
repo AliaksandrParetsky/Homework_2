@@ -37,9 +37,4 @@ public class ChapterButtonsController : MonoBehaviour
     {
         button.onClick.RemoveListener(GetInfo);
     }
-
-    public void DisButtons()
-    {
-        button.interactable = false;
-    }
 }

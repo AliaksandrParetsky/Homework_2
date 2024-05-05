@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(Button))]
 public class DisableButton : MonoBehaviour
 {
-    private Button button;
+    private Button disableButton;
 
     [SerializeField] private List<Button> buttons;
 
@@ -13,7 +14,7 @@ public class DisableButton : MonoBehaviour
     {
         if (GetComponent<Button>())
         {
-            button = GetComponent<Button>();
+            disableButton = GetComponent<Button>();
         }
         else
         {
@@ -32,12 +33,12 @@ public class DisableButton : MonoBehaviour
 
     private void OnEnable()
     {
-        button.onClick.AddListener(DisButtons);
+        disableButton.onClick.AddListener(DisButtons);
     }
 
     private void OnDisable()
     {
-        button.onClick.RemoveListener(DisButtons);
+        disableButton.onClick.RemoveListener(DisButtons);
 
         foreach (var button in buttons)
         {

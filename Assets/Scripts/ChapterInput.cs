@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+[RequireComponent(typeof(TMP_InputField))]
 public class ChapterInput : MonoBehaviour
 {
     private TMP_InputField textInputField;
@@ -8,10 +9,7 @@ public class ChapterInput : MonoBehaviour
     {
         if (GetComponent<TMP_InputField>())
         {
-            if(textInputField != null)
-            {
-                textInputField = GetComponent<TMP_InputField>();
-            }
+            textInputField = GetComponent<TMP_InputField>();
         }
         else
         {
