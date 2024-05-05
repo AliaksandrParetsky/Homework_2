@@ -13,6 +13,11 @@ public class ChapterInput : MonoBehaviour
                 textInputField = GetComponent<TMP_InputField>();
             }
         }
+        else
+        {
+            Debug.LogError("Component TMP_InputField is Null!");
+            return;
+        }
     }
 
     private void OnDisable()

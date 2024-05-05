@@ -29,6 +29,7 @@ public class DropDowne : MonoBehaviour
         else
         {
             Debug.LogError("Text is Null!");
+            return;
         }
     }
 }

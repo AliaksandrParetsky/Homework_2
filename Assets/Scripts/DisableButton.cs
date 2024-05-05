@@ -15,6 +15,11 @@ public class DisableButton : MonoBehaviour
         {
             button = GetComponent<Button>();
         }
+        else
+        {
+            Debug.LogError("Component Button is Null!");
+            return;
+        }
     }
 
     private void DisButtons()

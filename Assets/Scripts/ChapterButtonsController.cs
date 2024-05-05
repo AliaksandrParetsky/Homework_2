@@ -11,15 +11,7 @@ public class ChapterButtonsController : MonoBehaviour
 
     private void GetInfo()
     {
-        if(lableText == null)
-        {
-            Debug.LogError($"LableText is null!");
-            return;
-        }
-        else 
-        {
-            lableText.text = $"The first way to click on {gameObject.name} using a script";
-        }
+        lableText.text = $"The first way to click on {gameObject.name} using a script";
     }
 
     private void OnEnable()
@@ -36,8 +28,8 @@ public class ChapterButtonsController : MonoBehaviour
             else
             {
                 Debug.LogError("LableText is Null!");
+                return;
             }
-            
         }
     }
 
